@@ -13,7 +13,7 @@ extra_reqs = {
 }
 
 setup(
-    name="numcodecs-raster",
+    name="raster_codecs",
     version="0.1.0",
     python_requires=">=3.7",
     description="numcodecs-raster",
