@@ -13,10 +13,10 @@ extra_reqs = {
 }
 
 setup(
-    name="numcodecs-raster",
+    name="raster_codecs",
     version="0.1.0",
     python_requires=">=3.7",
-    description="numcodecs-raster",
+    description="Numcodecs implementations of codecs commonly used by raster data.",
     long_description=readme,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -30,7 +30,7 @@ setup(
     keywords="raster zarr dask xarray numcodecs imagecodecs",
     author="Jeff Albrecht",
     author_email="geospatialjeff@gmail.com",
-    url="https://github.com/geospatial-jeff/numcodecs-raster",
+    url="https://github.com/geospatial-jeff/raster-codecs",
     license="MIT",
     packages=find_packages(exclude=["tests"]),
     install_requires=inst_reqs,

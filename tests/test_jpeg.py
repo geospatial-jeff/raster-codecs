@@ -2,7 +2,7 @@ import numpy as np
 import numpy.testing
 import zarr
 
-from numcodecs_raster import Jpeg
+from raster_codecs import Jpeg
 
 
 def test_zarr_compatibility():
