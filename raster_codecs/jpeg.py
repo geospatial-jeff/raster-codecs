@@ -1,10 +1,12 @@
 import enum
 from dataclasses import dataclass
-from typing import Any, Dict, Optional
+from typing import Optional
 
 import imagecodecs
 from numcodecs import register_codec
 from numcodecs.abc import Codec
+
+from raster_codecs.config import _ConfigMixin
 
 
 class Colorspace(enum.Enum):
@@ -13,7 +15,7 @@ class Colorspace(enum.Enum):
 
 
 @dataclass
-class Jpeg(Codec):
+class Jpeg(_ConfigMixin, Codec):
     optimize: Optional[bool] = None
     smoothing: Optional[int] = None
     level: Optional[int] = None
@@ -46,22 +48,6 @@ class Jpeg(Codec):
             outcolorspace=colorspace,
             out=out,
         )
-
-    def get_config(self):
-        return {
-            "id": "jpeg",
-            "optimize": self.optimize,
-            "smoothing": self.smoothing,
-            "level": self.level,
-            "colorspace": self.colorspace,
-            "lossless": self.lossless,
-            "bitspersample": self.bitspersample,
-            "header": self.header,
-        }
-
-    @classmethod
-    def from_config(cls, config: Dict[str, Any]) -> "Jpeg":
-        return cls(**config)
 
 
 register_codec(Jpeg, codec_id="jpeg")
