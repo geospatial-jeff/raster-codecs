@@ -13,6 +13,9 @@ class _ConfigMixin:
 
     @classmethod
     def from_config(cls, config: Dict[str, Any]):
+        if "id" in config:
+            config = config.copy()
+            del config["id"]
         return cls(**config)  # type:ignore
 
     @classmethod
