@@ -6,7 +6,7 @@ with open("README.md") as f:
     readme = f.read()
 
 inst_reqs: List[str] = ["numcodecs", "imagecodecs"]
-dev_reqs: List[str] = ["pytest", "pytest-cov"]
+dev_reqs: List[str] = ["pre-commit", "pytest", "pytest-cov"]
 
 extra_reqs = {
     "dev": dev_reqs,
