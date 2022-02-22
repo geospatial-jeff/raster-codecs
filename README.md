@@ -7,9 +7,6 @@ Provides a lightweight wrapper over [imagecodecs](https://github.com/cgohlke/ima
    data (ex. blosc, zstd, lz4, msgpack).  Aligning the two under the same interface lets us utilize both with the same
    code!
 
-This allows us to use the compressions provided
-by `imagecodecs` in zarr arrays.
-
 The `numcodecs` interface is built around python's buffer protocol.  Numpy implements this buffer protocol, and 
 `imagecodecs` is built around numpy.  So this all works out pretty well.
 
