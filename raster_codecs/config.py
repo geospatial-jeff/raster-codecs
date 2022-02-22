@@ -1,6 +1,8 @@
 from dataclasses import asdict, dataclass
 from typing import Any, Dict
 
+from numcodecs import register_codec
+
 
 @dataclass
 class _ConfigMixin:
@@ -12,3 +14,7 @@ class _ConfigMixin:
     @classmethod
     def from_config(cls, config: Dict[str, Any]):
         return cls(**config)  # type:ignore
+
+    @classmethod
+    def _register(cls):
+        register_codec(cls, codec_id=cls.__name__.lower())

@@ -50,4 +50,4 @@ class Jpeg(_ConfigMixin, Codec):
         )
 
 
-register_codec(Jpeg, codec_id="jpeg")
+Jpeg._register()
