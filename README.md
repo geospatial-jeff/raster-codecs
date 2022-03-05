@@ -12,3 +12,4 @@ The `numcodecs` interface is built around python's buffer protocol.  Numpy imple
 
 ## Supported compressions
 - JPEG
+- Deflate
