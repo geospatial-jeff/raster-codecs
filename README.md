@@ -3,7 +3,7 @@ Provides a lightweight wrapper over [imagecodecs](https://github.com/cgohlke/ima
 [numcodecs](https://github.com/zarr-developers/numcodecs) interface.  This has several benefits:
 - Allows the use of compressions provided by `imagecodecs` in zarr arrays.
 - `imagecodecs` and `numcodecs` support very different compressions.  The former implements compressions specific
-   to raster data (ex. jpeg, lzw, deflate) while the latter implements compressions that are more general to binary
+   to imagery (ex. jpeg, lzw, deflate) while the latter implements compressions that are more general to binary
    data (ex. blosc, zstd, lz4, msgpack).  Aligning the two under the same interface lets us utilize both with the same
    code!
 
