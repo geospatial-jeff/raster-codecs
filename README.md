@@ -1,4 +1,4 @@
-# numcodecs-raster
+# raster-codecs
 Provides a lightweight wrapper over [imagecodecs](https://github.com/cgohlke/imagecodecs) implementing the
 [numcodecs](https://github.com/zarr-developers/numcodecs) interface.  This lets us use the compressions provided by `imagecodecs` in zarr arrays.
 
